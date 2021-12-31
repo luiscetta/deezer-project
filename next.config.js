@@ -6,11 +6,8 @@ module.exports = {
       use: ["@svgr/webpack"]
     });
     return config;
+  },
+  images: {
+    domains: ['api.deezer.com'],
   }
 };
-
-const withImages = require('next-images')
-module.exports = withImages({
-  esModule: true
-});
-
