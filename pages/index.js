@@ -23,7 +23,7 @@ export default function Home({ tracks }) {
         <div className={styles.background_black}>
           <h2 className={styles.title_content}>Principal</h2>
           <div id="backgroundList" className={styles.background_white} styleloading="lazy">
-            {tracks.map(track => <Track artist={track.artist.name} cover={track.album.cover} track={track.title} duration={track.duration} album={track.album.title} />)}
+            {tracks.map(track => <Track artist={track.artist.name} cover={track.album.cover} track={track.title} duration={track.duration} album={track.album.title} preview={track.preview} link={track.link} />)}
           </div>
         </div>
       </div>

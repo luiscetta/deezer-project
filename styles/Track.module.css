@@ -1,0 +1,38 @@
+.container {
+    padding: 1rem 0;
+    margin: auto;
+}
+
+.cover {
+    border-radius: 0.3rem;
+}
+
+.title_artist {
+    margin: auto;
+    padding: 0.3rem 0 0;
+    font-size: 1rem;
+    width: 80%;
+    color: #252525;
+}
+
+.track_duration,
+.album_title {
+    margin: auto;
+    font-size: .8rem;
+    padding: .2rem 0;
+    color: #424242;
+}
+
+.fullsong {
+    background-color: rgb(10, 110, 10);
+    font-size: .63rem;
+    color: #fff;
+    padding: .1rem .2rem;
+    border-radius: .1rem;
+}
+
+.fullsong:hover {
+    background-color: rgb(31, 168, 31);
+    transition: all 0.2s ease-in;
+    font-weight: bold;
+}
