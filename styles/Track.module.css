@@ -1,5 +1,5 @@
 .container {
-    padding: 1rem 0;
+    padding: 2rem 0;
     margin: auto;
 }
 
@@ -24,17 +24,31 @@
 }
 
 .fullsong {
-    background-color: rgb(10, 110, 10);
-    font-size: 0.63rem;
+    background-image: linear-gradient(
+        to right top,
+        #d800ff,
+        #f200d9,
+        #ff00b6,
+        #ff0096,
+        #ff007b,
+        #ff2a60,
+        #ff4846,
+        #fe632c,
+        #f48f00,
+        #dcb700,
+        #b8db0e,
+        #7efb5f
+    );
+    font-size: 0.7rem;
     color: #fff;
     padding: 0.1rem 0.2rem;
     border-radius: 0.1rem;
 }
 
 .fullsong:hover {
-    background-color: rgb(31, 168, 31);
     transition: all 0.2s ease-in;
     font-weight: bold;
+    transform: scale(2.2);
 }
 
 .preview_content {
@@ -43,5 +57,5 @@
 
 .bar_player {
     width: 100%;
-    margin: .6rem 0;
+    margin: 0.6rem 0;
 }
