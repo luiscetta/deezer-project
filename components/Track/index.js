@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 
 import Image from 'next/image'
 import styles from '../../styles/Track.module.css'
@@ -19,17 +21,17 @@ export default function Track({ artist, album, cover, duration, track, link, pre
         setIsPlaying(!isPlaying);
     }
 
-    useEffect(() => {
-        if (!audioRef.current) {
-            return;
-        }
+    // useEffect(() => {
+    //     if (!audioRef.current) {
+    //         return;
+    //     }
 
-        if (isPlaying) {
-            audioRef.current.play()
-        } else {
-            audioRef.current.pause()
-        }
-    }, [isPlaying]);
+    //     if (isPlaying) {
+    //         audioRef.current.play()
+    //     } else {
+    //         audioRef.current.pause()
+    //     }
+    // }, [isPlaying]);
 
 
     return (
@@ -47,12 +49,10 @@ export default function Track({ artist, album, cover, duration, track, link, pre
                         <button hidden onClick={toggleIsPlaying}>Play</button>
                     )
                     }
-                    <audio
+                    <AudioPlayer
                         className={styles.bar_player}
                         controls
                         src={preview}
-                        autoPlay={false}
-                        ref={audioRef}
                         onPlay={() => setPlayingState(true)}
                         onPause={() => setPlayingState(false)}
                     />
