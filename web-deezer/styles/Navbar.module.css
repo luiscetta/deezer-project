@@ -1,0 +1,169 @@
+.container {
+    width: 100%;
+    text-align: center;
+    top: 0;
+}
+
+.content {
+    width: 81%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.list_content {
+    display: flex;
+    gap: 2rem;
+}
+
+.list {
+    font-size: 1rem;
+    padding: 0 0.7rem;
+}
+
+.list:hover {
+    color: #fff;
+    background-color: #252525;
+    border-radius: 0.3rem 0 0.3rem 0;
+    transition: all 0.3s ease-in;
+}
+
+.search {
+    display: flex;
+    width: 100%;
+}
+
+.form_group {
+    margin: auto;
+    width: 90%;
+    text-align: right;
+}
+
+.input_group {
+    text-align: left;
+    width: 11rem;
+    height: 1.8rem;
+    border-radius: 0.3rem;
+    border: 0.1rem solid #252525;
+    outline: none;
+}
+
+.new_track_btn {
+    width: 5rem;
+    height: 1.8rem;
+    margin-left: 1rem;
+    background-color: #252525;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 0.3rem;
+    border: 1px solid #181717;
+}
+
+.new_track_btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    cursor: pointer;
+    border: 1px solid #181717;
+    transition: all 0.2s ease-in;
+}
+
+/* MEDIA ______________________________________________________________________________*/
+
+@media screen and (max-width: 428px) {
+    .container {
+        width: 100%;
+    }
+
+    .logotipo {
+        width: 5.3rem;
+        margin: auto;
+    }
+
+    .content {
+        display: grid;
+        width: max-content;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        text-align: center;
+        margin: auto;
+    }
+
+    .list_content {
+        margin: auto;
+    }
+
+    .list {
+        font-size: 0.8rem;
+        font-weight: bold;
+        align-items: center;
+        padding: .5rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .search {
+        padding: 0 0 1rem;
+        margin: auto;
+      }
+      
+      .form_group {
+       display: flex;
+      }
+    
+      .input_group {
+        width:  90%;
+      }
+}
+
+@media screen and (width: 412px) {
+    .container {
+        width: 100%;
+    }
+
+    .logotipo {
+        width: 5.3rem;
+        margin: auto;
+    }
+
+    .content {
+        width: max-content;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    .list {
+        font-size: 0.8rem;
+        font-weight: bold;
+        align-items: center;
+        padding: 0;
+    }
+}
+
+@media screen and (width: 320px) {
+    .container {
+        width: 100%;
+    }
+
+    .logotipo {
+        width: 5.3rem;
+        margin: auto;
+    }
+
+    .content {
+        width: max-content;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    .list {
+        font-size: 0.8rem;
+        font-weight: bold;
+        align-items: center;
+        padding: 0;
+    }
+}
