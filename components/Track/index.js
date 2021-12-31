@@ -6,6 +6,7 @@ import styles from '../../styles/Track.module.css'
 import { secondsToMinutes } from '../../utils/Time'
 
 export default function Track({ artist, album, cover, duration, track, link, preview }) {
+
     const audioRef = useRef(null);
 
     const [isPlaying, setIsPlaying] = useState(false);
@@ -41,22 +42,21 @@ export default function Track({ artist, album, cover, duration, track, link, pre
             <div className={styles.preview_content}>
                 <div className={styles.player_btn}>
                     {isPlaying ? (
-                        <button onClick={toggleIsPlaying}>Pause</button>
+                        <button hidden onClick={toggleIsPlaying}>Pause</button>
                     ) : (
-                        <button onClick={toggleIsPlaying}>Play</button>
+                        <button hidden onClick={toggleIsPlaying}>Play</button>
                     )
                     }
-
-                    <button>Reload</button>
+                    <audio
+                        className={styles.bar_player}
+                        controls
+                        src={preview}
+                        autoPlay={false}
+                        ref={audioRef}
+                        onPlay={() => setPlayingState(true)}
+                        onPause={() => setPlayingState(false)}
+                    />
                 </div>
-                <audio
-                    className={styles.bar_player}
-                    src={preview}
-                    autoPlay={false}
-                    ref={audioRef}
-                    onPlay={() => setPlayingState(true)}
-                    onPause={() => setPlayingState(false)}
-                />
             </div>
 
             <a className={styles.fullsong} href={link} target="_blank" rel="noreferrer">FULL SONG HERE</a>

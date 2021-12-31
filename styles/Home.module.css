@@ -48,15 +48,13 @@
 
 .background_white {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   margin: auto;
   background-color: #fff;
   width: 98.3%;
   height: 25rem;
-  padding-bottom: 3rem;
   border-radius: 0.3rem;
-  border: 0.1rem solid #fff;
-  overflow: scroll;
+  overflow: auto;
 }
 
 #backgroundList img {
