@@ -1,8 +1,22 @@
+import { useEffect, useState } from 'react';
+
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import './api'
+import { getTracks } from '../services/DeezerAPI';
 
 export default function Home() {
+  const [tracks, setTracks] = useState([]);
+
+  useEffect(() => {
+    async function retrieveTracks() {
+      if (!tracks.length) {
+        const _tracks = await getTracks();
+        setTracks(_tracks.data);
+      }
+    }
+    retrieveTracks();
+  }, [tracks]);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -15,7 +29,7 @@ export default function Home() {
         <div className={styles.background_black}>
           <h2 className={styles.title_content}>Principal</h2>
           <div id="backgroundList" className={styles.background_white} styleloading="lazy">
-              <h2>Lista Aqui</h2>
+            {tracks.map(track => <p>{track.artist.name} - isso é pra testar só</p>)}
           </div>
         </div>
       </div>
