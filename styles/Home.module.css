@@ -57,35 +57,18 @@
   overflow: auto;
 }
 
-#backgroundList img {
-  width: 9rem;
-  height: auto;
-  margin: 3rem 1rem 0;
-  border-radius: 0.5rem;
-  border: 0.1rem solid #ccc;
-
-  transition: all 0.5s;
-}
-
-#backgroundList img:hover,
-#backgroundList p:hover {
-  cursor: pointer;
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-
-  -webkit-filter: drop-shadow(15px 8px 5px rgba(0, 0, 0, 0.5));
-  filter: drop-shadow(15px 8px 5px rgba(0, 0, 0, 0.5));
-}
-
-.page-subtitle {
-  color: #000;
-  margin-top: 5px;
-}
-
-
 /* MEDIA ____________________________________________________________________________________*/
 @media screen and (max-width: 428px) {
   .background_black {
     width: 100%;
+  }
+
+  .title_content {
+    font-size: 1.2rem;
+  }
+
+  .background_white {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }

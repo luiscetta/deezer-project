@@ -59,7 +59,10 @@ export default function Track({ artist, album, cover, duration, track, link, pre
                 </div>
             </div>
 
-            <a className={styles.fullsong} href={link} target="_blank" rel="noreferrer">FULL SONG HERE</a>
+            <div className={styles.actions_btn}>
+                <a className={styles.fullsong} href={link} target="_blank" rel="noreferrer">FULL SONG HERE</a>
+                <button className={styles.favorite_btn}>&#10084;</button>
+            </div>
         </div>
     );
 }
