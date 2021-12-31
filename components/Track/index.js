@@ -39,7 +39,7 @@ export default function Track({ artist, album, cover, duration, track, link, pre
             <Image className={styles.cover} src={cover} height={130} width={130} />
             <p className={styles.title_artist}>{artist} - {track}</p>
             <p className={styles.track_duration}>Duration: {secondsToMinutes(duration)}</p>
-            <p className={styles.album_title}>Album: {album}</p>
+            <p className={styles.album_title}><span>Album</span>: {album}</p>
 
             <div className={styles.preview_content}>
                 <div className={styles.player_btn}>
