@@ -37,6 +37,7 @@
 .bar_player {
     width: 80%;
     margin: 1rem auto;
+    border-radius: 0.3rem;
 }
 
 .actions_btn {
@@ -81,7 +82,7 @@
     font-size: 1rem;
     background-color: #ffffff;
     border: 1px solid #ccc;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
     width: 1.6rem;
     height: 1.6rem;
 }

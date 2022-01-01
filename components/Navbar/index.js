@@ -28,7 +28,7 @@ export default function Navigation() {
                 </div>
                 <div className={styles.search}>
                     <div className={styles.form_group}>
-                        <input className={styles.input_group} type="text" id="form-title" type="text" placeholder="Artist, Tracks, Podcasts..." />
+                        <input className={styles.input_group} type="text" id="form-title" type="text" placeholder="Artist, Track, Album..." />
                         <button className={styles.new_track_btn} type="submit" id="add-btn">Search</button>
                     </div>
                 </div>
