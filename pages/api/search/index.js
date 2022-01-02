@@ -1,7 +1,6 @@
 const axios = require('axios');
 
-
-export default async function searchFilter(req, res) {
+export default async function getDataList(req, res) {
     try {
         if (req.method === 'GET') {
             const search = (await axios.get('https://api.deezer.com/search?q=')).data;

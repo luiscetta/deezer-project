@@ -33,46 +33,6 @@
     transition: all 0.3s ease-in;
 }
 
-.search {
-    display: flex;
-    width: 100%;
-}
-
-.form_group {
-    margin: auto;
-    width: 90%;
-    text-align: right;
-}
-
-.input_group {
-    text-align: left;
-    width: 12rem;
-    height: 1.8rem;
-    border-radius: 0.3rem;
-    border: 0.1rem solid #252525;
-    outline: none;
-}
-
-.new_track_btn {
-    width: 5rem;
-    height: 1.8rem;
-    margin-left: 1rem;
-    background-color: #252525;
-    color: #fff;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 0.3rem;
-    border: 1px solid #181717;
-}
-
-.new_track_btn:hover {
-    background-color: rgb(255, 255, 255);
-    color: #000;
-    cursor: pointer;
-    border: 1px solid #181717;
-    transition: all 0.2s ease-in;
-}
-
 /* MEDIA ______________________________________________________________________________*/
 
 @media screen and (max-width: 428px) {
@@ -83,6 +43,44 @@
     .logotipo {
         width: 5.3rem;
         margin: auto;
+    }.search {
+        display: flex;
+        width: 100%;
+    }
+    
+    .form_group {
+        margin: auto;
+        width: 90%;
+        text-align: right;
+    }
+    
+    .input_group {
+        text-align: left;
+        width: 12rem;
+        height: 1.8rem;
+        border-radius: 0.3rem;
+        border: 0.1rem solid #252525;
+        outline: none;
+    }
+    
+    .new_track_btn {
+        width: 5rem;
+        height: 1.8rem;
+        margin-left: 1rem;
+        background-color: #252525;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 0.3rem;
+        border: 1px solid #181717;
+    }
+    
+    .new_track_btn:hover {
+        background-color: rgb(255, 255, 255);
+        color: #000;
+        cursor: pointer;
+        border: 1px solid #181717;
+        transition: all 0.2s ease-in;
     }
 
     .content {
@@ -105,19 +103,6 @@
         padding: .5rem;
         letter-spacing: 0.1rem;
     }
-
-    .search {
-        padding: 0 0 1rem;
-        margin: auto;
-      }
-      
-      .form_group {
-       display: flex;
-      }
-    
-      .input_group {
-        width:  90%;
-      }
 }
 
 @media screen and (width: 412px) {

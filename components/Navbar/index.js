@@ -1,6 +1,10 @@
-import Link from 'next/link'
+
+import { useState } from 'react';
+import axios from 'axios';
+
+import Link from 'next/link';
 import styles from '../../styles/Navbar.module.css';
-import Image from 'next/image'
+import Image from 'next/image';
 
 export default function Navigation() {
     return (
@@ -25,12 +29,6 @@ export default function Navigation() {
                             <a>FAVORITES</a>
                         </Link>
                     </li>
-                </div>
-                <div className={styles.search}>
-                    <div className={styles.form_group}>
-                        <input className={styles.input_group} type="text" id="form-title" type="text" placeholder="Artist, Track, Album..." />
-                        <button className={styles.new_track_btn} type="submit" id="add-btn">Search</button>
-                    </div>
                 </div>
             </ul>
         </div>

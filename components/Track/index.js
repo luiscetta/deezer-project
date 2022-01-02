@@ -8,30 +8,12 @@ import styles from '../../styles/Track.module.css'
 import { secondsToMinutes } from '../../utils/Time'
 
 export default function Track({ artist, album, cover, duration, track, link, preview }) {
-
     const audioRef = useRef(null);
-
     const [isPlaying, setIsPlaying] = useState(false);
 
     function setPlayingState(state) {
         setIsPlaying(state)
     }
-
-    function toggleIsPlaying() {
-        setIsPlaying(!isPlaying);
-    }
-
-    // useEffect(() => {
-    //     if (!audioRef.current) {
-    //         return;
-    //     }
-
-    //     if (isPlaying) {
-    //         audioRef.current.play()
-    //     } else {
-    //         audioRef.current.pause()
-    //     }
-    // }, [isPlaying]);
 
 
     return (
@@ -43,12 +25,6 @@ export default function Track({ artist, album, cover, duration, track, link, pre
 
             <div className={styles.preview_content}>
                 <div className={styles.player_btn}>
-                    {isPlaying ? (
-                        <button hidden onClick={toggleIsPlaying}>Pause</button>
-                    ) : (
-                        <button hidden onClick={toggleIsPlaying}>Play</button>
-                    )
-                    }
                     <AudioPlayer
                         className={styles.bar_player}
                         controls
@@ -61,7 +37,7 @@ export default function Track({ artist, album, cover, duration, track, link, pre
 
             <div className={styles.actions_btn}>
                 <a className={styles.fullsong} href={link} target="_blank" rel="noreferrer">FULL SONG HERE</a>
-                <button className={styles.favorite_btn}>&#10084;</button>
+                <button className={styles.favorite_btn || styles.favorite_full}>&#10084;</button>
             </div>
         </div>
     );
