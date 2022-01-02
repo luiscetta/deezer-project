@@ -23,12 +23,13 @@ export async function getStaticPropsSearch() {
 export default function Home({ tracks }) {
   const [text, setText] = useState('');
   console.log(text)
-  
+
   useEffect(() => {
     if (text) {
+
       getDataList()
     }
-  }, []);
+  }, [text]);
 
   return (
     <div className={styles.container}>
@@ -56,7 +57,7 @@ export default function Home({ tracks }) {
         <div className={styles.background_black}>
           <h2 className={styles.title_content}>Principal</h2>
           <div id="backgroundList" className={styles.background_white} styleloading="lazy">
-            {tracks.map(track => <Track artist={track.artist.name} cover={track.album.cover} track={track.title} duration={track.duration} album={track.album.title} preview={track.preview} link={track.link} />)}
+            {tracks.map(track => <Track key={track.id} artist={track.artist.name} cover={track.album.cover} track={track.title} duration={track.duration} album={track.album.title} preview={track.preview} link={track.link} />)}
           </div>
         </div>
       </div>

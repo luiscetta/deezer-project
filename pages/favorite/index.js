@@ -1,7 +1,18 @@
+import axios from 'axios';
+
 import Head from 'next/head'
 import styles from '../../styles/Favorite.module.css'
 
-export default function Favorite() {
+import FavoriteTracks from '../../components/FavoriteTracks';
+
+export async function getStaticProps() {
+    const response = (await axios.get('http://localhost:3000/api/chart')).data;
+    if (!response) return { notFound: true };
+    return { props: { tracks: response.tracks.data } };
+}
+
+export default function Favorite({ tracks }) {
+
     return (
         <div className={styles.container}>
             <Head>
@@ -14,7 +25,7 @@ export default function Favorite() {
                 <div className={styles.background_black}>
                     <h2 className={styles.title_content}>Favorite Tracks</h2>
                     <div id="backgroundList" className={styles.background_white} styleloading="lazy">
-
+                        {/* {tracks.map(track => <FavoriteTracks key={track.id} artist={track.artist.name} cover={track.album.cover} track={track.title} duration={track.duration} album={track.album.title} preview={track.preview} link={track.link} />)} */}
                     </div>
                 </div>
             </div>
