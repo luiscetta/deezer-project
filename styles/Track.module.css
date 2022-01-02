@@ -76,23 +76,6 @@
     transform: scale(1.1);
 }
 
-.favorite_btn {
-    color: rgb(182, 0, 0);
-    text-align: center;
-    font-size: 1rem;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 0.3rem;
-    width: 1.6rem;
-    height: 1.6rem;
-}
-
-.favorite_btn:hover {
-    background-color: rgb(238, 235, 235);
-    border: 1px solid rgb(150, 150, 150);
-    cursor: pointer;
-}
-
 /* MEDIA _______________________________________________________________________________________________*/
 @media only screen and (max-width: 428px) {
     .conatiner {
@@ -109,9 +92,5 @@
 
     .actions_btn {
         width: 99%;
-    }
-
-    .favorite_btn {
-        width: auto;
     }
 }

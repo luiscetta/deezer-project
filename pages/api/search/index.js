@@ -1,5 +1,6 @@
 const axios = require('axios');
 
+
 export default async function getDataList(req, res) {
     try {
         if (req.method === 'GET') {
@@ -7,6 +8,6 @@ export default async function getDataList(req, res) {
             res.status(200).json(search);
         }
     } catch (err) {
-        console.error(err);
+        console.error("OPS!" + err);
     }
 }

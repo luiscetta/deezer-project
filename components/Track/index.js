@@ -5,6 +5,8 @@ import 'react-h5-audio-player/lib/styles.css';
 import Image from 'next/image'
 import styles from '../../styles/Track.module.css'
 
+import FavoriteButton from '../../components/FavoriteButton';
+
 import { secondsToMinutes } from '../../utils/Time'
 
 export default function Track({ artist, album, cover, duration, track, link, preview }) {
@@ -14,7 +16,6 @@ export default function Track({ artist, album, cover, duration, track, link, pre
     function setPlayingState(state) {
         setIsPlaying(state)
     }
-
 
     return (
         <div className={styles.container}>
@@ -37,7 +38,7 @@ export default function Track({ artist, album, cover, duration, track, link, pre
 
             <div className={styles.actions_btn}>
                 <a className={styles.fullsong} href={link} target="_blank" rel="noreferrer">FULL SONG HERE</a>
-                <button className={styles.favorite_btn || styles.favorite_full}>&#10084;</button>
+                <FavoriteButton id="favorite-btn" />
             </div>
         </div>
     );

@@ -22,7 +22,7 @@ export async function getStaticPropsFilter() {
 
 export default function Home({ tracks }) {
   const [text, setText] = useState('');
-
+  
   useEffect(() => {
     if (text) {
       getDataList()
