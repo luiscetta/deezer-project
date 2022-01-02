@@ -1,5 +1,13 @@
 .search_input {
     width: 30%;
-    border-radius: .2rem;
+    border-radius: 0.2rem;
     border: 1px solid #252525;
+}
+
+/* MEDIA___________________________________________________________  */
+@media screen and (max-width: 428px) {
+    .search_input {
+        display: flex;
+        width: 100%;
+    }
 }

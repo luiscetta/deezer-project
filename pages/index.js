@@ -14,7 +14,7 @@ export async function getStaticProps() {
   return { props: { tracks: response.tracks.data } };
 }
 
-export async function getStaticPropsFilter() {
+export async function getStaticPropsSearch() {
   const response = (await axios.get('http://localhost:3000/api/search')).data;
   if (!response) return { notFound: true };
   return { props: { data: response.data } };
@@ -22,12 +22,13 @@ export async function getStaticPropsFilter() {
 
 export default function Home({ tracks }) {
   const [text, setText] = useState('');
+  console.log(text)
   
   useEffect(() => {
     if (text) {
       getDataList()
     }
-  }, [text]);
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -45,7 +46,7 @@ export default function Home({ tracks }) {
             placeholder="Artist, Track, Album..."
           /> */}
 
-          <SearchInput value={text} onChange={(search) => setText(search)} />
+          <SearchInput id="search-input" value={text} onChange={(search) => setText(search)} />
 
           {/* <button className={styles.new_track_btn} type="submit" id="add-btn">Search</button> */}
         </div>

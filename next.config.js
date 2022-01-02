@@ -11,3 +11,5 @@ module.exports = {
     domains: ['api.deezer.com'],
   }
 };
+
+

@@ -43,26 +43,8 @@
     .logotipo {
         width: 5.3rem;
         margin: auto;
-    }.search {
-        display: flex;
-        width: 100%;
     }
-    
-    .form_group {
-        margin: auto;
-        width: 90%;
-        text-align: right;
-    }
-    
-    .input_group {
-        text-align: left;
-        width: 12rem;
-        height: 1.8rem;
-        border-radius: 0.3rem;
-        border: 0.1rem solid #252525;
-        outline: none;
-    }
-    
+ 
     .new_track_btn {
         width: 5rem;
         height: 1.8rem;
