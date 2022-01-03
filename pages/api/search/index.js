@@ -1,13 +1,12 @@
 import axios from 'axios';
 
 
-const url = 'https://api.deezer.com/search?q=forfun';
-
-export default async function getDataList(req, res) {
+export default async function handler(req, res) {
     try {
-        if (req.method === 'GET') {
-            const search = (await axios.get(url), data);
-            res.status(200).json(search);
+        if (req.method === 'POST') {
+            const { search } = req.body;
+            const response = (await axios.get(`https://api.deezer.com/search?q=${search}`)).data;
+            res.status(200).json(response.data);
         }
     } catch (err) {
         console.error("Ops! Houve um erro: " + err);

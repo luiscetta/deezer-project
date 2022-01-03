@@ -4,9 +4,9 @@ import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
-import Track from '../components/Track'
 import SearchInput from '../components/SearchInput';
-import getDataList from '../pages/api/search';
+import MainTracks from '../components/MainTracks';
+import SearchResults from '../components/SearchResults';
 
 export async function getStaticProps() {
   const response = (await axios.get('http://localhost:3000/api/chart')).data;
@@ -14,22 +14,16 @@ export async function getStaticProps() {
   return { props: { tracks: response.tracks.data } };
 }
 
-export async function getStaticPropsSearch() {
-  const response = (await axios.get('http://localhost:3000/api/search')).data;
-  if (!response) return { notFound: true };
-  return { props: { data: response.data } };
-}
-
 export default function Home({ tracks }) {
-  const [text, setText] = useState('');
-  console.log(text)
+  const [searchText, setSearchText] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
 
-  useEffect(() => {
-    if (text) {
-
-      getDataList()
-    }
-  }, [text]);
+  const doSearch = async (search) => {
+    setSearchText(search);
+    const response = (await axios.post('http://localhost:3000/api/search', { search })).data;
+    console.log(response);
+    setSearchResults(response);
+  };
 
   return (
     <div className={styles.container}>
@@ -41,15 +35,7 @@ export default function Home({ tracks }) {
 
       <div className={styles.search}>
         <div className={styles.form_group}>
-          {/* <input
-            className={styles.input_group}
-            type="text" id="form-title"
-            placeholder="Artist, Track, Album..."
-          /> */}
-
-          <SearchInput id="search-input" value={text} onChange={(search) => setText(search)} />
-
-          {/* <button className={styles.new_track_btn} type="submit" id="add-btn">Search</button> */}
+          <SearchInput id="search-input" value={searchText} onChange={(search) => doSearch(search)} />
         </div>
       </div>
 
@@ -57,7 +43,7 @@ export default function Home({ tracks }) {
         <div className={styles.background_black}>
           <h2 className={styles.title_content}>Principal</h2>
           <div id="backgroundList" className={styles.background_white} styleloading="lazy">
-            {tracks.map(track => <Track key={track.id} artist={track.artist.name} cover={track.album.cover} track={track.title} duration={track.duration} album={track.album.title} preview={track.preview} link={track.link} />)}
+            {searchResults.length ? <SearchResults results={searchResults} /> : <MainTracks tracks={tracks} />}
           </div>
         </div>
       </div>

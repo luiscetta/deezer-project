@@ -11,7 +11,9 @@ const searchInput = ({ value, onChange }) => {
             type="search"
             value={value}
             onChange={handleChange}
-            placeholder="Artist, track, album..." />
+            placeholder="Artist, track, album..."
+            autoComplete="off"
+        />
     )
 }
 

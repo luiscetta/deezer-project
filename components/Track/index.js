@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
+
 
 import Image from 'next/image'
 import styles from '../../styles/Track.module.css'
@@ -26,7 +25,7 @@ export default function Track({ artist, album, cover, duration, track, link, pre
 
             <div className={styles.preview_content}>
                 <div className={styles.player_btn}>
-                    <AudioPlayer
+                    <audio
                         className={styles.bar_player}
                         controls
                         src={preview}

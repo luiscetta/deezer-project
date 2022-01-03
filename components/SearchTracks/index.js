@@ -1,15 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
-import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
 
 import Image from 'next/image'
-import styles from '../../styles/Track.module.css'
+import styles from '../../styles/Track.module.css';
 
 import FavoriteButton from '../../components/FavoriteButton';
 
 import { secondsToMinutes } from '../../utils/Time'
 
-export default function FavoriteTracks({ artist, album, cover, duration, track, link, preview }) {
+export default function Track({ artist, album, cover, duration, track, link, preview }) {
     const audioRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
@@ -26,9 +24,10 @@ export default function FavoriteTracks({ artist, album, cover, duration, track, 
 
             <div className={styles.preview_content}>
                 <div className={styles.player_btn}>
-                    <AudioPlayer
+                    <audio
                         className={styles.bar_player}
                         controls
+                        autoPlay={false}
                         src={preview}
                         onPlay={() => setPlayingState(true)}
                         onPause={() => setPlayingState(false)}
