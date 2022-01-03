@@ -40,3 +40,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* MEDIA ______________________________________________________________________________  */
+@media screen and (max-width: 1920px) {
+  html,
+  body {
+    height: 100%;
+  }
+}
