@@ -11,28 +11,6 @@
     border-radius: 0.3rem;
 }
 
-.title_artist {
-    margin: auto;
-    padding: 0.3rem 0 0;
-    font-size: 1rem;
-    width: 80%;
-    color: #252525;
-}
-
-.track_duration,
-.album_title {
-    margin: auto;
-    font-size: 0.8rem;
-    padding: 0.2rem 0;
-    color: #424242;
-
-    font-style: italic;
-}
-
-.album_title span {
-    font-weight: bold;
-}
-
 .preview_content {
     margin: auto;
 }

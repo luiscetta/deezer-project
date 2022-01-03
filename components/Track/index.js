@@ -1,7 +1,8 @@
-import { useContext, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 import Image from 'next/image'
 import styles from '../../styles/Track.module.css'
+import { ArtistTitle, TrackDuration, AlbumTitle } from '../../styles/Track_styles';
 
 import FavoriteButton from '../../components/FavoriteButton';
 
@@ -18,9 +19,9 @@ export default function Track({ artist, album, cover, duration, track, link, pre
     return (
         <div id="track-items" className={styles.container}>
             <Image className={styles.cover} src={cover} height={130} width={130} />
-            <p className={styles.title_artist}>{artist} - {track}</p>
-            <p className={styles.track_duration}>Duration: {secondsToMinutes(duration)} min</p>
-            <p className={styles.album_title}><span>Album</span>: {album}</p>
+            <ArtistTitle>{artist} - {track}</ArtistTitle>
+            <TrackDuration>Duration: {secondsToMinutes(duration)} min</TrackDuration>
+            <AlbumTitle><span>Album</span>: {album}</AlbumTitle>
 
             <div className={styles.preview_content}>
                 <div className={styles.player_btn}>
