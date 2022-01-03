@@ -55,6 +55,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: auto;
+  padding-top: .3rem;
   background-color: #fff;
   width: 98.3%;
   height: 25rem;
