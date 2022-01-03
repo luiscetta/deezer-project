@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 import Image from 'next/image'
 import styles from '../../styles/Track.module.css';
@@ -7,7 +7,7 @@ import FavoriteButton from '../../components/FavoriteButton';
 
 import { secondsToMinutes } from '../../utils/Time'
 
-export default function Track({ artist, album, cover, duration, track, link, preview }) {
+export default function SearchTracks({ artist, album, cover, duration, track, link, preview }) {
     const audioRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
