@@ -1,5 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
-
+import { useContext, useRef, useState } from 'react';
 
 import Image from 'next/image'
 import styles from '../../styles/Track.module.css'
@@ -17,7 +16,7 @@ export default function Track({ artist, album, cover, duration, track, link, pre
     }
 
     return (
-        <div className={styles.container}>
+        <div id="track-items" className={styles.container}>
             <Image className={styles.cover} src={cover} height={130} width={130} />
             <p className={styles.title_artist}>{artist} - {track}</p>
             <p className={styles.track_duration}>Duration: {secondsToMinutes(duration)} min</p>

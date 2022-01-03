@@ -48,3 +48,9 @@ a {
     height: 100%;
   }
 }
+
+@media screen and (width: 1360px) {
+  html, body {
+    height: auto;
+  }
+}
