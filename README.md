@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Como começar
 
-Primeiramente, clone este projeto e execute a instalação do projeto:
+Primeiramente, clone este projeto e execute a sua instalação:
 
 ```bash
 npm install
