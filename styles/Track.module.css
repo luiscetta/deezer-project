@@ -1,5 +1,5 @@
 .container {
-    width: 95%;
+    width: 85%;
     height: 95%;
     padding: 2rem 0;
     border-radius: 1rem;
@@ -58,13 +58,14 @@
 }
 
 /* MEDIA _______________________________________________________________________________________________*/
-@media only screen and (max-width: 428px) {
+@media screen and (max-width: 428px) {
     .conatiner {
         padding: 2rem 0;
+        width: 95%;
     }
 
     .bar_player {
-        width: 100%;
+        width: 98%;
     }
 
     .fullsong {
@@ -72,6 +73,21 @@
     }
 
     .actions_btn {
-        width: 99%;
+        width: 91%;
     }
+}
+
+@media screen and (width: 320px) and (height: 568px) {
+    .container {
+        width: 95%;
+    }
+
+    .bar_player {
+        width: 98%;
+    }
+
+    .actions_btn {
+        width: 91%;
+    }
+    
 }
