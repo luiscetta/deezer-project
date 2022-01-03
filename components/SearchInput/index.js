@@ -6,14 +6,17 @@ const searchInput = ({ value, onChange }) => {
     }
 
     return (
-        <input
-            className={styles.search_input}
-            type="search"
-            value={value}
-            onChange={handleChange}
-            placeholder="Artist, track, album..."
-            autoComplete="off"
-        />
+        <div className={styles.container}>
+            <input
+                className={styles.search_input}
+                type="search"
+                value={value}
+                onChange={handleChange}
+                placeholder="Artist, track, album..."
+                autoComplete="off"
+            />
+            <span className={styles.search_span}>Search</span>
+        </div>
     )
 }
 
